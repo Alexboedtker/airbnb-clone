@@ -7,6 +7,11 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon .navbar-brand .fa-puzzle-piece {
+  width: 100%;
+  background-color: #c67ace;
+  color: #f4f4f2;
+  padding: 20px;
+  border: solid;
+  border-radius: 3px;
 }
