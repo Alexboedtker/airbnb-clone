@@ -10,7 +10,7 @@ class PuzzlesController < ApplicationController
   def create
     @puzzle = Puzzle.new(puzzle_params)
     if @puzzle.save
-      redirect_to puzzle_path(@puzzle)
+      redirect_to puzzles_index_path
     else
       render :new
     end

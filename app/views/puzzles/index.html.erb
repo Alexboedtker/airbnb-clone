@@ -2,5 +2,7 @@
 <p>Find me in app/views/puzzles/index.html.erb</p>
 
 <% @puzzles.each do |puzzle| %>
-  <p><%= puzzle %></p>
+  <div><%= image_tag 'puzzle-placeholder.jpg', alt: puzzle.title %></div>
+  <p><%= puzzle.title %></p>
+  <p><%= puzzle.size %></p>
 <% end %>
