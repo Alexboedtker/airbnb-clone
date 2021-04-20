@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Rent a Puzzle</h1>
+
+  <% @puzzles.each do |puzzle| %>
+    <div class="card m-3">
+      <div class="d-flex">
+        <div><%= image_tag 'puzzle-placeholder.jpg', alt: puzzle.title, height: 200 %></div>
+        <div class="card-body pl-3">
+          <h5 class="card-title"><%= puzzle.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= puzzle.size %> Pieces</h6>
+          <p class="card-text"><%= puzzle.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
