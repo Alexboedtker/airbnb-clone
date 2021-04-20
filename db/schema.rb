@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2021_04_20_101112) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_puzzles_on_user_id"
     t.integer "price"
+    t.index ["user_id"], name: "index_puzzles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

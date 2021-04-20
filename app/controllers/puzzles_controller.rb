@@ -9,6 +9,7 @@ class PuzzlesController < ApplicationController
 
   def create
     @puzzle = Puzzle.new(puzzle_params)
+    @puzzle.user = current_user
     if @puzzle.save
       redirect_to puzzles_path
     else
@@ -19,6 +20,6 @@ class PuzzlesController < ApplicationController
   private
 
   def puzzle_params
-    params.require(:puzzle).permit(:title, :size, :description)
+    params.require(:puzzle).permit(:title, :size, :description, :price)
   end
 end
