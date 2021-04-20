@@ -21,6 +21,11 @@ class PuzzlesController < ApplicationController
     end
   end
 
+  def my_puzzles
+    @puzzles = Puzzle.where(user_id: current_user.id)
+    @user = current_user
+  end
+
   private
 
   def puzzle_params
