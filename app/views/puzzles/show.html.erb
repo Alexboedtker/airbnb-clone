@@ -1,33 +1,39 @@
 <div class="container">
   <h1><%= @puzzle.title %></h1>
   <p><%= @puzzle.size %> Pieces</p>
+  <div class="row">
 
-  <div class="card-product">
-    <div class="card-product-photo">
-      <div> <%= cl_image_tag @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title, height: 200 %></div>
-    </div>
+    <div class="col-8">
 
-    <div class="card-product-details">
-      <p>Price per day:</p>
-      <div class="dates">
-        <div class="start_date">
-          <label for="start">Start date:</label>
-          <input type="date" id="start" name="rent-start" value="2021-04-20"
-          min="2021-04-20" max="2021-08-20">
-        </div>
-        <div class="end_date">
-          <label for="start"> End date:</label>
-          <input type="date" id="end" name="rent-end" value="2021-04-20"
-          min="2021-04-20" max="2021-08-20">
-        </div>
+      <div class="card m-3 card-left">
+        <div> <%= cl_image_tag @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title %></div>
       </div>
-      <p>Total pice:</p>
-      <div class="btn btn-primary">Book now</div>
-    </div>
-  </div>
+      <div class="m-3">
+        <h3>Description:</h3>
+        <%= @puzzle.description %>
+      </div>
 
-  <div>
-    <h3>Description:</h3>
-    <%= @puzzle.description %>
+    </div>
+
+    <div class="col-4">
+      <div class="card mt-3 card-right">
+        <p>Price per day:</p>
+        <div class="dates">
+          <div class="start_date">
+            <label for="start">Start date:</label>
+            <input type="date" id="start" name="rent-start" value="2021-04-20"
+            min="2021-04-20" max="2021-08-20">
+          </div>
+          <div class="end_date">
+            <label for="start"> End date:</label>
+            <input type="date" id="end" name="rent-end" value="2021-04-20"
+            min="2021-04-20" max="2021-08-20">
+          </div>
+        </div>
+        <p>Total price:</p>
+        <div class="btn btn-primary">Book now</div>
+      </div>
+    </div>
+
   </div>
 </div>
