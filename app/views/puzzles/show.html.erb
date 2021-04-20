@@ -1,0 +1,33 @@
+<div class="container">
+  <h1><%= @puzzle.title %></h1>
+  <p><%= @puzzle.size %> Pieces</p>
+
+  <div class="card-product">
+    <div class="card-product-photo">
+      <%= image_tag "", alt: "Puzzle photo" %>
+    </div>
+
+    <div class="card-product-details">
+      <p>Price per day:</p>
+      <div class="dates">
+        <div class="start_date">
+          <label for="start">Start date:</label>
+          <input type="date" id="start" name="rent-start" value="2021-04-20"
+          min="2021-04-20" max="2021-08-20">
+        </div>
+        <div class="end_date">
+          <label for="start"> End date:</label>
+          <input type="date" id="end" name="rent-end" value="2021-04-20"
+          min="2021-04-20" max="2021-08-20">
+        </div>
+      </div>
+      <p>Total pice:</p>
+      <div class="btn btn-primary">Book now</div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Description:</h3>
+    <%= @puzzle.description %>
+  </div>
+</div>

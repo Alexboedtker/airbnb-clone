@@ -3,6 +3,10 @@ class PuzzlesController < ApplicationController
     @puzzles = Puzzle.all
   end
 
+  def show
+    @puzzle = Puzzle.find(params[:id])
+  end
+
   def new
     @puzzle = Puzzle.new
   end
