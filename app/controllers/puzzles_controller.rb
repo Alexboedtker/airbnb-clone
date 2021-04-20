@@ -24,6 +24,6 @@ class PuzzlesController < ApplicationController
   private
 
   def puzzle_params
-    params.require(:puzzle).permit(:title, :size, :description, :price)
+    params.require(:puzzle).permit(:title, :size, :description, :photo, :price)
   end
 end
