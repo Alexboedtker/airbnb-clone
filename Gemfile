@@ -34,6 +34,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 # for secret file
 gem 'dotenv-rails', groups: [:development, :test]
+# for photo upload
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   gem 'pry-byebug'
