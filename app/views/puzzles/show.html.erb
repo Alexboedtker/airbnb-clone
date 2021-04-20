@@ -4,15 +4,9 @@
   <div class="row">
 
     <div class="col-8">
-
-      <div class="card m-3 card-left">
-        <div> <%= cl_image_tag @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title %></div>
+      <div class="card m-3">
+        <div class="card-left" style="background-image: url(<%= cl_image_path @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title %>)"></div>
       </div>
-      <div class="m-3">
-        <h3>Description:</h3>
-        <%= @puzzle.description %>
-      </div>
-
     </div>
 
     <div class="col-4">
@@ -32,6 +26,11 @@
         </div>
         <p>Total price:</p>
         <div class="btn btn-primary">Book now</div>
+      </div>
+
+      <div class="m-3">
+        <h3>Description:</h3>
+        <%= @puzzle.description %>
       </div>
     </div>
 
