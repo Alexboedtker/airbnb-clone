@@ -4,7 +4,7 @@
 
   <div class="card-product">
     <div class="card-product-photo">
-      <%= image_tag "", alt: "Puzzle photo" %>
+      <div> <%= cl_image_tag @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title, height: 200 %></div>
     </div>
 
     <div class="card-product-details">
