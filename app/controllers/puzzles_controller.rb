@@ -3,6 +3,10 @@ class PuzzlesController < ApplicationController
     @puzzles = Puzzle.all
   end
 
+  def show
+    @puzzle = Puzzle.find(params[:id])
+  end
+
   def new
     @puzzle = Puzzle.new
   end
@@ -10,7 +14,7 @@ class PuzzlesController < ApplicationController
   def create
     @puzzle = Puzzle.new(puzzle_params)
     if @puzzle.save
-      redirect_to puzzles_index_path
+      redirect_to puzzles_path
     else
       render :new
     end
