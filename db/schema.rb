@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2021_04_20_154732) do
     t.integer "price"
     t.bigint "user_id", null: false
     t.string "photo"
-
     t.index ["user_id"], name: "index_puzzles_on_user_id"
   end
 
