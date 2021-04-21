@@ -1,0 +1,11 @@
+ .photo-index {
+  height: 300px;
+  width: 230px;
+  overflow: hidden;
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    object-position: 50% 50%;
+  }
+ }
+
