@@ -12,6 +12,7 @@ puts("Database cleaned")
 puts("Creating users")
 puts("First user")
 
+
 1.times do
   user = User.new(  email: Faker::Internet.unique.email,   last_name: Faker::Name.unique.first_name,   first_name: Faker::Name.last_name,   password: "qwaszx")
   user.save!

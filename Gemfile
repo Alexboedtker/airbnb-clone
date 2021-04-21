@@ -38,6 +38,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 # for fake data
 gem 'faker', '~> 2.17'
+# geo
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'
