@@ -1,6 +1,13 @@
 class PuzzlesController < ApplicationController
   def index
     @puzzles = Puzzle.all
+    @markers = @puzzles.geocoded.map do |puzzle|
+      {
+        lat: puzzle.latitude,
+        lng: puzzle.longitude,
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { puzzle: puzzle })
+      }
+    end
   end
 
   def show

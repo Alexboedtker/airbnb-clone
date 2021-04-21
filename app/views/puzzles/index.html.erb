@@ -1,6 +1,15 @@
 <div class="container">
   <h1>Rent a Puzzle</h1>
-  
-  <%= render 'shared/list' %>
-
+  <div class="row">
+    <div class="col-8">
+      <%= render 'shared/list' %>
+    </div>
+    <div class="col-4">
+      <div id="map" class="card m-3"
+        style="width: 100%; height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
 </div>
