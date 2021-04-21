@@ -3,7 +3,11 @@
     <h3>Your booking</h3>
   </div>
 
-  <div>
-
+  <div class="form">
+    <%= simple_form_for [@puzzle, @booking] do |f| %>
+      <%= f.input :start_date, placeholder: 'Enter a start date' %>
+      <%= f.input :end_date, placeholder: 'Enter a end date' %>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div

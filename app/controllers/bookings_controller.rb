@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
 
-  def new  #nie potrzebuje jezeli mama to w jednej stronie
+  def new
     @puzzle = Puzzle.find(params[:puzzle_id])
     @booking = Booking.new
   end
