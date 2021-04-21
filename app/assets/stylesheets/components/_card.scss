@@ -1,0 +1,22 @@
+.card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.card-right {
+  padding: 20px;
+}
+
+.card-left {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
