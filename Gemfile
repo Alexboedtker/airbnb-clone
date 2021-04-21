@@ -36,6 +36,8 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 # for photo upload
 gem 'cloudinary', '~> 1.16.0'
+# for fake data
+gem 'faker', '~> 2.17'
 
 group :development, :test do
   gem 'pry-byebug'
