@@ -8,4 +8,6 @@ class Puzzle < ApplicationRecord
   validates :price, presence: true, numericality: { only_integer: true }
 
   belongs_to :user
+
+  has_many :bookings
 end
