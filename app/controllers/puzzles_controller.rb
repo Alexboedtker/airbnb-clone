@@ -5,6 +5,7 @@ class PuzzlesController < ApplicationController
 
   def show
     @puzzle = Puzzle.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
