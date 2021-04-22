@@ -1,6 +1,11 @@
 class PuzzlesController < ApplicationController
   def index
-    @puzzles = Puzzle.all
+    if params[:query].present?
+      @puzzles = Puzzle.search_by_title_description_and_size(params[:query])
+    else
+      @puzzles = Puzzle.all
+    end
+
     @markers = @puzzles.geocoded.map do |puzzle|
       {
         lat: puzzle.latitude,

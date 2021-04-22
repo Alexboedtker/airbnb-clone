@@ -1,5 +1,11 @@
 <div class="container">
-  <h1>Rent a Puzzle</h1>
+
+  <div class="d-flex justify-content-between mt-3">
+    <h1><%= link_to "Rent a Puzzle", puzzles_path %></h1>
+    <%= render 'shared/searchbar' %>
+  </div>
+
+
   <div class="row">
     <div class="col-7">
       <%= render 'shared/list' %>

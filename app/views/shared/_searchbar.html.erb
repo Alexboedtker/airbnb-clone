@@ -1,0 +1,16 @@
+<div class="d-flex">
+  <div class="search">
+  <%= form_tag puzzles_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a Puzzle"
+    %>
+  </div>
+  <div class="search-submit">
+    <%= button_tag type: 'submit', class: "button my-button" do %>
+      <i class="fas fa-search" aria-hidden="true"></i>
+    <% end %>
+  </div>
+  <% end %>
+</div>

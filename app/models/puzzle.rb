@@ -15,4 +15,11 @@ class Puzzle < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   default_scope { order(created_at: :desc) }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_description_and_size,
+    against: [ :title, :description, :size ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
