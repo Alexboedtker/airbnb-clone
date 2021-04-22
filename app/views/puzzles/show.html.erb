@@ -9,31 +9,21 @@
       </div>
     </div>
 
-    <div class="col-4">
-      <div class="card mt-3 card-right">
-        <p>Price per day: <%= @puzzle.price %></p>
-        <div class="form">
-          <%= simple_form_for [@puzzle, @booking] do |f| %>
-            <%= f.input :start_date  %>
-            <%= f.input :end_date %>
-            <%= f.submit class: 'btn btn-primary' %>
-          <% end %>
-        </div>
-        <div>
-          <p>Total price:</p>
-        </div>
-      </div>
+    <%= render 'shared/booking-form' %>
 
-      <div class="m-3">
-        <div>
-        <h3>Description:</h3>
-          <%= @puzzle.description %>
-        </div>
-        <div style="margin-top: 12px">
-         <p>Location: <%= @puzzle.address %> </p>
-        </div>
-      </div>
+    <div>
+      <p>Total price:</p>
     </div>
 
+
+    <div class="m-2">
+      <div>
+        <h3>Description:</h3>
+        <%= @puzzle.description %>
+      </div>
+      <div style="margin-top: 12px">
+        <p>Location: <%= @puzzle.address %> </p>
+      </div>
+    </div>
   </div>
 </div>
