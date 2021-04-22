@@ -24,7 +24,7 @@ class PuzzlesController < ApplicationController
     @puzzle = Puzzle.new(puzzle_params)
     @puzzle.user = current_user
     if @puzzle.save
-      redirect_to puzzles_path
+      redirect_to my_puzzles_path
     else
       render :new
     end
