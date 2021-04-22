@@ -5,7 +5,8 @@ class PuzzlesController < ApplicationController
       {
         lat: puzzle.latitude,
         lng: puzzle.longitude,
-        infoWindow: render_to_string(partial: "shared/info_window", locals: { puzzle: puzzle })
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { puzzle: puzzle }),
+        image_url: helpers.asset_url('puzzle-marker.png')
       }
     end
   end

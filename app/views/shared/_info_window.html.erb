@@ -1,2 +1,5 @@
 <h2><%= puzzle.title %></h2>
 <p><%= puzzle.address %></p>
+<div> <%= cl_image_tag puzzle.photo.attached? ? cl_image_path(puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: puzzle.title, width: 200 %></div>
+
+
