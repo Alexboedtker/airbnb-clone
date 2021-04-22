@@ -1,9 +1,10 @@
 <div class="col-4">
   <div class="card mt-3 card-right">
-    <p>Price per day: <%= @puzzle.price %></p>
+    <p>Price per day: <span id="price-per-day"><%= @puzzle.price %></span> CHF</p>
+    <p>Total price: <span id="total-price"></span> CHF</p>
     <%= simple_form_for [@puzzle, @booking] do |f| %>
-      <div class="form-inputs">
-        <%= f.input :start_date  %>
+      <div class="form-inputs" oninput="computeTotalPrice()">
+        <%= f.input :start_date %>
         <%= f.input :end_date %>
       </div>
 
