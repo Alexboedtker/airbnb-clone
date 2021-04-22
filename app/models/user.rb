@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :puzzles, dependent: :destroy
 
   has_many :bookings
+
+  has_one_attached :photo
 end

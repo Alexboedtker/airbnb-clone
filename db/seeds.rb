@@ -16,6 +16,7 @@ puts("First user")
 
 1.times do
   user = User.new(  email: Faker::Internet.unique.email,   last_name: Faker::Name.unique.first_name,   first_name: Faker::Name.last_name,   password: "qwaszx")
+  user.photo.attach(    io: File.open(Rails.root.join("app/assets/images/hola-ale.jpeg")), filename: "hola-ale.jpg")
   user.save!
 
   1.times do
@@ -29,12 +30,19 @@ puts("First user")
     puzzle.photo.attach(    io: File.open(Rails.root.join("app/assets/images/Black_736.jpeg")), filename: "Black_736.jpeg")
     puzzle.save!
   end
+
+  1.times do
+    puzzle = Puzzle.new(    title: "Disney:Princess", size: 40, description: "Great puzzles. Very high quality. They provide a lot of fun", price: 15, address: "Albisstrasse 33, 8134 Adliswil", user: user)
+    puzzle.photo.attach(    io: File.open(Rails.root.join("app/assets/images/Disney_Princess_40.jpg")), filename: "Disney_Princess_40.jpg")
+    puzzle.save!
+  end
 end
 
 puts("Second user")
 
 1.times do
   user2 = User.new(  email: Faker::Internet.unique.email,   last_name: Faker::Name.unique.first_name,   first_name: Faker::Name.last_name,   password: "qazwsx")
+  user2.photo.attach(    io: File.open(Rails.root.join("app/assets/images/Alexboedtker.jpeg")), filename: "Alexboedtker.jpeg")
   user2.save!
 
   1.times do
@@ -60,6 +68,7 @@ puts("Third user")
 
 1.times do
   user3 = User.new(  email: Faker::Internet.unique.email,   last_name: Faker::Name.unique.first_name,   first_name: Faker::Name.last_name,   password: "qazwsx")
+  user3.photo.attach(    io: File.open(Rails.root.join("app/assets/images/SzczesnaAg.jpeg")), filename: "SzczesnaAg.jpeg")
   user3.save!
 
   1.times do
@@ -86,5 +95,6 @@ puts("Third user")
     puzzle.save!
   end
 end
+
 
 puts("Finshed!!")
