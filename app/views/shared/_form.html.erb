@@ -4,10 +4,10 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :title %>
-      <%= f.input :size %>
-      <%= f.input :description %>
-      <%= f.input :address %>
+      <%= f.input :title, placeholder: 'e.g. Cats' %>
+      <%= f.input :size,  placeholder: 'e.g. 1000' %>
+      <%= f.input :description, placeholder: 'Enter a comprehensive description of the product'  %>
+      <%= f.input :address, placeholder: 'e.g. Bellerivestrasse 1, 8008 Zürich' %>
       <%= f.input :price, placeholder: 'CHF/day' %>
       <%= f.input :photo, as: :file %>
     </div>
