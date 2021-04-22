@@ -5,9 +5,14 @@
 
   <div class="form">
     <%= simple_form_for [@puzzle, @booking] do |f| %>
-      <%= f.input :start_date, placeholder: 'Enter a start date' %>
-      <%= f.input :end_date, placeholder: 'Enter a end date' %>
+      <%= f.input :start_date  %>
+      <%= f.input :end_date %>
       <%= f.submit class: 'btn btn-primary' %>
     <% end %>
   </div>
-</div
+</div>
+
+<div>
+  <%= link_to 'All puzzles', puzzles_path %>
+</div>
+
