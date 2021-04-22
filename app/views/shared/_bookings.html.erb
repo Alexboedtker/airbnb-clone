@@ -2,11 +2,12 @@
   <% @bookings.each do |booking| %>
     <div class="card m-3">
       <div class="d-flex">
-        <div><%= cl_image_tag booking.puzzle.photo.key, alt: booking.puzzle.title, height: 200, width: 230%></div>
+        <div><%= cl_image_tag booking.puzzle.photo.attached? ? cl_image_path(booking.puzzle.photo.key) : asset_path('puzzle-placeholder.png'), alt: booking.puzzle.title, height: 200, width: 230 %></div>
         <div class="card-body pl-3">
-          <h3 class="card-title mb-4">Booking for: <%= booking.puzzle.title %></h3>
-          <p>Start date: <%= booking.start_date %></p>
-          <p>End date:<%= booking.end_date %> </p>
+          <h3 class="card-title mb-4"><%= link_to booking.puzzle.title, puzzle_path(booking.puzzle_id) %></h3>
+          <p><i class="far fa-calendar-check"></i> <%= booking.start_date %></p>
+          <p><i class="far fa-calendar-times"></i> <%= booking.end_date %> </p>
+          <p><i class="fas fa-map-marker-alt"></i> <%= booking.puzzle.address %> </p>
         </div>
       </div>
     </div>
