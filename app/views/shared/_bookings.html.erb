@@ -1,0 +1,14 @@
+<div>
+    <% @bookings.each do |booking| %>
+      <div class="card m-3">
+        <div class="d-flex">
+          <div><%= cl_image_tag booking.puzzle.photo.key, alt: booking.puzzle.title, height: 200, width: 230%></div>
+          <div class="card-body pl-3">
+            <h3 class="card-title mb-4">Booking for: <%= booking.puzzle.title %></h3>
+            <p>Start date: <%= booking.start_date %></p>
+            <p>End date:<%= booking.end_date %> </p>
+        </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
