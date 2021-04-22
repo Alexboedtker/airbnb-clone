@@ -11,26 +11,27 @@
 
     <div class="col-4">
       <div class="card mt-3 card-right">
-        <p>Price per day:</p>
-        <div class="dates">
-          <div class="start_date">
-            <label for="start">Start date:</label>
-            <input type="date" id="start" name="rent-start" value="2021-04-20"
-            min="2021-04-20" max="2021-08-20">
-          </div>
-          <div class="end_date">
-            <label for="start"> End date:</label>
-            <input type="date" id="end" name="rent-end" value="2021-04-20"
-            min="2021-04-20" max="2021-08-20">
-          </div>
+        <p>Price per day: <%= @puzzle.price %></p>
+        <div class="form">
+          <%= simple_form_for [@puzzle, @booking] do |f| %>
+            <%= f.input :start_date  %>
+            <%= f.input :end_date %>
+            <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
         </div>
-        <p>Total price:</p>
-        <div class="btn btn-primary"><%= link_to 'Book now', new_puzzle_booking_path(@puzzle) %></div>
+        <div>
+          <p>Total price:</p>
+        </div>
       </div>
 
       <div class="m-3">
+        <div>
         <h3>Description:</h3>
-        <%= @puzzle.description %>
+          <%= @puzzle.description %>
+        </div>
+        <div style="margin-top: 12px">
+         <p>Location: <%= @puzzle.address %> </p>
+        </div>
       </div>
     </div>
 

@@ -12,7 +12,12 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.save
 
-    # redirect_to
+    redirect_to my_bookings_path
+  end
+
+  def my_bookings
+    @bookings = Booking.where(user_id: current_user.id)
+    @user = current_user
   end
 
 
