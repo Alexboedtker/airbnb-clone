@@ -14,4 +14,5 @@ class Puzzle < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  default_scope { order(created_at: :desc) }
 end

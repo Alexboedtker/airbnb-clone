@@ -5,7 +5,7 @@
 
     <div class="col-8">
       <div class="card m-3">
-        <div class="card-left" style="background-image: url(<%= cl_image_path @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.jpg'), alt: @puzzle.title %>)"></div>
+        <div class="card-left" style="background-image: url(<%= cl_image_path @puzzle.photo.attached? ? cl_image_path(@puzzle.photo.key) : asset_path('puzzle-placeholder.png'), alt: @puzzle.title %>)"></div>
       </div>
     </div>
 
