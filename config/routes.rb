@@ -7,10 +7,3 @@ Rails.application.routes.draw do
   get   'my_puzzles', to: 'puzzles#my_puzzles'
 end
 
-
-=begin
-
-puzzle_bookings POST   /puzzles/:puzzle_id/bookings           bookings#create
-new_puzzle_booking GET    /puzzles/:puzzle_id/bookings/new    bookings#new
-
-=end
