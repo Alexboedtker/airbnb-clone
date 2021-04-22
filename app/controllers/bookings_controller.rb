@@ -9,10 +9,14 @@ class BookingsController < ApplicationController
     @puzzle = Puzzle.find(params[:puzzle_id])
     @booking = Booking.new(booking_params)
     @booking.puzzle = @puzzle
-    @booking.user = current_user
-    @booking.save
+    if user_signed_in?
+      @booking.user = current_user
+      @booking.save
 
-    redirect_to my_bookings_path
+      redirect_to my_bookings_path
+    else
+      redirect_to new_user_session_url
+    end
   end
 
   def my_bookings
