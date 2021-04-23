@@ -1,5 +1,5 @@
 <h2><%= link_to puzzle.title, puzzle_path(puzzle.id) %></h2>
-<p><%= puzzle.address.split.last %></p>
+<h6><%= puzzle.address.split.last %></h6>
 <div> <%= cl_image_tag puzzle.photo.attached? ? cl_image_path(puzzle.photo.key) : asset_path('puzzle-placeholder.png'), alt: puzzle.title, width: 200 %></div>
 
 
