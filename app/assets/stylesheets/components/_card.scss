@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.card-list {
+  height: 220px;
+}
+
 .card-product {
   display: flex;
   align-items: center;
@@ -27,4 +31,14 @@
   grid-gap: 16px;
   flex-grow: 1;
   margin: 16px;
+}
+
+.card-title a {
+  color: #000;
+}
+
+.card-list img {
+  height: 220px;
+  width: 250px;
+  object-fit: cover;
 }
