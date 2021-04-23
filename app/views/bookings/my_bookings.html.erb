@@ -1,19 +1,19 @@
 <div class="container">
   <h1><%= @user.first_name %>'s Bookings</h1>
-  <div class="float-container">
-    <%= render 'shared/bookings' %>
-    <div class="float-child">
-      <div class="card m-3">
-        <div class="card-body">
-          <h2>General rules</h2>
-          <p><i class="fas fa-puzzle-piece pink"></i> Be good</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Love other people</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Wear a mask</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Don't destroy the puzzles</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Don’t loose pieces</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Don’t eat or drink on the puzzle</p>
-          <p><i class="fas fa-puzzle-piece pink"></i> Don’t look back</p>
-        </div>
+  <div class="row">
+    <div class="col-7">
+      <%= render 'shared/bookings' %>
+    </div>
+    <div class="col-5">
+      <div class="card m-3 p-3">
+        <h2>General rules</h2>
+        <p><i class="fas fa-puzzle-piece pink"></i> Be good</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Love other people</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Wear a mask</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Don't destroy the puzzles</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Don’t loose pieces</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Don’t eat or drink on the puzzle</p>
+        <p><i class="fas fa-puzzle-piece pink"></i> Don’t look back</p>
       </div>
     </div>
   </div>
