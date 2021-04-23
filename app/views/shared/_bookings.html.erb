@@ -1,6 +1,6 @@
-<div>
+<div class="float-child">
   <% @bookings.each do |booking| %>
-    <div class="card m-3">
+    <div class="card m-3 ">
       <div class="d-flex">
         <div><%= cl_image_tag booking.puzzle.photo.attached? ? cl_image_path(booking.puzzle.photo.key) : asset_path('puzzle-placeholder.png'), alt: booking.puzzle.title, height: 200, width: 230 %></div>
         <div class="card-body pl-3">
@@ -14,3 +14,4 @@
     </div>
   <% end %>
 </div>
+

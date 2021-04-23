@@ -1,5 +1,5 @@
 <div class="col-4">
-  <div class="card mt-3 card-right">
+  <div class="card mt-5 card-right">
     <p>Price per day: <span id="price-per-day"><%= @puzzle.price %></span> CHF</p>
     <p>Total price: <span id="total-price"></span> CHF</p>
     <%= simple_form_for [@puzzle, @booking] do |f| %>
@@ -8,8 +8,8 @@
         <%= f.input :end_date %>
       </div>
 
-      <div class="mb-2">
-        <%= f.submit 'Confirm your Booking' , class: 'btn btn-primary' %>
+      <div>
+        <%= f.submit 'Confirm your Booking' , class: 'btn btn-primary'%>
       <div>
     <% end %>
   </div>
